@@ -1,0 +1,199 @@
+@import './globalVar.less';
+
+// 自定义样式
+// --
+.box-card {
+  &.serach {
+    margin-bottom: 8px;
+  }
+  &.@{ant-prefix}-card-small {
+    > .@{ant-prefix}-card-head {
+      > .@{ant-prefix}-card-head-wrapper {
+        > .@{ant-prefix}-card-extra {
+          padding: 4px 0;
+          .@{ant-prefix}-btn {
+            padding-top: 0;
+            height: @btn-height-sm;
+            line-height: @btn-height-sm - 1px;
+          }
+        }
+      }
+    }
+  }
+  .@{ant-prefix}-btn + .@{ant-prefix}-btn {
+    margin-left: @card-padding-base;
+  }
+  .@{ant-prefix}-card-head-title {
+    margin-left: 6px;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > span:first-child {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+}
+
+// 操作列按钮
+.cc-btn-primary,
+.anticon.cc-btn-primary {
+  color: @primary-color;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cc-btn-danger,
+.anticon.cc-btn-danger {
+  color: @error-color;
+  font-size: 20px;
+  cursor: pointer;
+}
+.cc-btn-disabled,
+.anticon.cc-btn-disabled {
+  color: @disabled-color;
+  font-size: 20px;
+  cursor: not-allowed;
+}
+
+// 功能区按钮
+.@{ant-prefix}-btn.cc-btn-extra-func {
+  color: #2cc500;
+  border-color: #2cc500;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  &:hover,
+  &:focus,
+  &:active {
+    color: #9dd333;
+    border-color: #9dd333;
+  }
+}
+
+// Table
+// 表格偶行
+.@{ant-prefix}-table .@{ant-prefix}-table-body tbody > tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+// 表格头文字大小
+.@{ant-prefix}-table-thead > tr > th {
+  font-size: @font-size-base + 1;
+  font-weight: bold;
+}
+.area-table .table-column-action {
+  display: inline-flex;
+  > .@{ant-prefix}-divider-vertical {
+    top: 0;
+    min-height: 12px;
+    margin: 4px 8px;
+  }
+}
+
+// Form
+.area-dialogform,
+.area-search {
+  form.@{ant-prefix}-form {
+    // 查询框、form表单区使用flex布局
+    display: flex;
+    flex-wrap: wrap;
+    .@{ant-prefix}-form-item {
+      // 每个form-item定宽
+      width: 300px;
+      min-width: 280px;
+      > .@{ant-prefix}-form-item-label {
+        // 如果有label，label也定宽
+        width: 120px;
+        min-width: 100px;
+      }
+      &.form-item__singleline {
+        // 单行显示
+        width: 96%;
+      }
+    }
+    // Form中的Input
+    .@{ant-prefix}-form-item-control-input-content {
+      min-height: @input-height-base;
+      line-height: @input-height-base;
+      .@{ant-prefix}-input {
+        min-height: @input-height-base;
+        line-height: @input-height-base;
+        font-size: @font-size-md;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .@{ant-prefix}-input-number {
+        width: 100%;
+      }
+      .@{ant-prefix}-calendar-picker,
+      .@{ant-prefix}-picker,
+      .@{ant-prefix}-picker-small {
+        width: 100%;
+        padding: 7px 9px 7px;
+      }
+      .@{ant-prefix}-select {
+        .@{ant-prefix}-select-selector {
+          min-height: @height-base + 2px;
+          > .@{ant-prefix}-select-selection-search > input {
+            min-height: @height-base;
+          }
+          > .@{ant-prefix}-select-selection-placeholder,
+          > .@{ant-prefix}-select-selection-item {
+            line-height: @height-base;
+          }
+        }
+      }
+    }
+  }
+  &.form-item__one {
+    .@{ant-prefix}-form .@{ant-prefix}-form-item {
+      // 每个form-item定宽
+      width: 96%;
+    }
+  }
+  &.form-item__two {
+    .@{ant-prefix}-form .@{ant-prefix}-form-item {
+      // 每个form-item定宽
+      width: 48%;
+    }
+  }
+  &.form-item__three {
+    .@{ant-prefix}-form .@{ant-prefix}-form-item {
+      // 每个form-item定宽
+      width: 32%;
+    }
+  }
+  &.form-item__four {
+    .@{ant-prefix}-form .@{ant-prefix}-form-item {
+      // 每个form-item定宽
+      width: 24%;
+    }
+  }
+}
+
+// Search
+.area-search {
+  form.@{ant-prefix}-form {
+    .@{ant-prefix}-form-item {
+      margin: 16px 0;
+    }
+  }
+}
+
+// 右侧谈出层样式
+.side-form-drawer {
+  display: flex;
+  flex-wrap: wrap;
+  .antdv-row {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .form-drawer-block {
+    width: 100%;
+  }
+}
+// 紧急度颜色
+.urgent {
+  color: red;
+}
